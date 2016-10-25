@@ -405,6 +405,11 @@ class PolymorphicParentModelAdmin(admin.ModelAdmin):
             'form_url': mark_safe(form_url),
             'opts': opts,
             'add': True,
+            'change': self.has_change_permission(request),
+            'has_add_permission': True,
+            'has_change_permission': self.has_change_permission(request),
+            'has_delete_permission': self.has_delete_permission(request),
+            'save_as': False,
             'save_on_top': self.save_on_top,
         })
         if hasattr(self.admin_site, 'root_path'):
