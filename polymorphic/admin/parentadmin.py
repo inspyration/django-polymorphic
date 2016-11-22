@@ -413,6 +413,7 @@ class PolymorphicParentModelAdmin(admin.ModelAdmin):
             'save_on_top': self.save_on_top,
             'show_save_and_add_another': False,
             'show_save_and_continue': False,
+            'show_delete_link': False,
         })
         if hasattr(self.admin_site, 'root_path'):
             context['root_path'] = self.admin_site.root_path  # Django < 1.4
