@@ -2,13 +2,11 @@
 
 {% if save_on_top %}
   {% block submit_buttons_top %}
-    {% include 'admin/submit_line.html' with show_save=1 show_save_and_add_another=show_save_and_add_another show_save_and_continue=show_save_and_continue show_delete_link=show_delete_link%}
+    {% include 'admin/submit_line.html' with show_save=1 %}
   {% endblock %}
 {% endif %}
 
 {% block submit_buttons_bottom %}
-  {% include 'admin/submit_line.html' with show_save=1 show_save_and_add_another=show_save_and_add_another show_save_and_continue=show_save_and_continue show_delete_link=show_delete_link%}
+  {% include 'admin/submit_line.html' with show_save=1 %}
 {% endblock %}
 
-
-show_save_and_add_another=show_save_and_add_another show_save_and_continue=show_save_and_continue show_delete_link=show_delete_link
