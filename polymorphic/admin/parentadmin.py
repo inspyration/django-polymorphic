@@ -411,6 +411,8 @@ class PolymorphicParentModelAdmin(admin.ModelAdmin):
             'has_delete_permission': self.has_delete_permission(request),
             'save_as': False,
             'save_on_top': self.save_on_top,
+            'show_save_and_add_another': False,
+            'show_save_and_continue': False,
         })
         if hasattr(self.admin_site, 'root_path'):
             context['root_path'] = self.admin_site.root_path  # Django < 1.4
